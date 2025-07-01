@@ -87,7 +87,7 @@ export default function UserProfile() {
                   </li>
                 ))}
               </ul>
-              <h6>Total: ₹ {order.totalAmount}</h6>
+              {/* <h6>Total: ₹ {order.totalAmount}</h6> */}
             </div>
           </div>
         ))}
