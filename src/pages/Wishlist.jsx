@@ -24,7 +24,7 @@ export default function Wishlist() {
 
   return (
     <div className="container mt-4">
-      <h1>My Wishlist</h1>
+      <h1 className="text-center mb-5">My Wishlist</h1>
 
       {wishlistItems.length === 0 ? (
         <p className="mt-5">Your wishlist is empty.</p>

@@ -77,7 +77,7 @@ export default function Nav() {
               <li className="nav-item d-flex align-items-center">
                 <NavLink to="/user">
                   <button
-                    className={`btn btn-sm ${
+                    className={`btn ${
                       isLoggedIn ? "btn-success" : "btn-secondary"
                     }`}
                     onClick={() => setIsLoggedIn(true)}
@@ -93,7 +93,7 @@ export default function Nav() {
                     `nav-link ${isActive ? "text-danger" : ""}`
                   }
                 >
-                  <FaHeart /> <WishListCounter />
+                  <FaHeart size={24} /> <WishListCounter />
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -103,7 +103,7 @@ export default function Nav() {
                     `nav-link ${isActive ? "text-success" : ""}`
                   }
                 >
-                  <FaShoppingCart /> <CartCounter />
+                  <FaShoppingCart size={24} /> <CartCounter />
                 </NavLink>
               </li>
             </ul>

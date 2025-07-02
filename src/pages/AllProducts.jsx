@@ -44,115 +44,123 @@ export default function AllProducts() {
     <div>
       <div className="row">
         <div className="col-md-2 ps-4 mt-4">
-          <div className="d-flex justify-content-between mb-5">
-            <p>
-              <strong>Filters</strong>
-            </p>
-            <p
-              className="text-primary"
-              style={{ cursor: "pointer" }}
-              onClick={() => {
-                setMaxPrice(500);
-                setMinrating(0);
-                setSortOrder("");
-              }}
-            >
-              Clear
-            </p>
-          </div>
-          <div>
-            <label htmlFor="priceRange">
-              <strong>Price</strong>
-            </label>
-            <br />
-            <br />
+          <div className="ms-3">
             <div className="d-flex justify-content-between mb-5">
-              <span>0</span>
-              <input
-                type="range"
-                className="form-range"
-                min="0"
-                max="500"
-                id="priceRange"
-                value={maxPrice}
-                onChange={(e) => setMaxPrice(e.target.value)}
-              />
-              <span>{maxPrice}</span>
+              <p>
+                <strong>Filters</strong>
+              </p>
+              <p
+                className="text-primary"
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  setMaxPrice(500);
+                  setMinrating(0);
+                  setSortOrder("");
+                }}
+              >
+                Clear
+              </p>
             </div>
-          </div>
+            <div>
+              <label htmlFor="priceRange">
+                <strong>Price</strong>
+              </label>
+              <br />
+              <br />
+              <div className="d-flex justify-content-between mb-5">
+                <span>0</span>
+                <input
+                  type="range"
+                  className="form-range mx-2"
+                  min="0"
+                  max="500"
+                  id="priceRange"
+                  value={maxPrice}
+                  onChange={(e) => setMaxPrice(e.target.value)}
+                />
+                <span>{maxPrice}</span>
+              </div>
+            </div>
 
-          <div className="mb-5">
-            <label htmlFor="rating">
-              <strong>Rating</strong>
-            </label>
-            <br />
-            <br />
-            <label>
-              <input
-                type="radio"
-                name="rating"
-                value="4"
-                checked={minRating === 4}
-                onChange={(e) => setMinrating(Number(e.target.value))}
-              />
-              4 Stars & above
-            </label>
-            <br />
-            <label>
-              <input
-                type="radio"
-                name="rating"
-                value="3"
-                onChange={(e) => setMinrating(Number(e.target.value))}
-              />
-              3 Stars & above
-            </label>
-            <br />
-            <label>
-              <input
-                type="radio"
-                name="rating"
-                value="2"
-                onChange={(e) => setMinrating(Number(e.target.value))}
-              />
-              2 Stars & above
-            </label>
-            <br />
-            <label>
-              <input
-                type="radio"
-                name="rating"
-                value="1"
-                onChange={(e) => setMinrating(Number(e.target.value))}
-              />
-              1 Stars & above
-            </label>
-          </div>
-          <div className="mb-5">
-            <label htmlFor="sorting">
-              <strong>Sort by</strong>
-            </label>
-            <br />
-            <br />
-            <label>
-              <input
-                type="radio"
-                name="sorting"
-                value="asc"
-                onChange={(e) => setSortOrder(e.target.value)}
-              />
-              Price - Low to High
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="sorting"
-                value="desc"
-                checked={sortOrder === "desc"}
-                onChange={(e) => setSortOrder(e.target.value)}
-              />
-              Price - High to Low
-            </label>
+            <div className="mb-5">
+              <label htmlFor="rating">
+                <strong>Rating</strong>
+              </label>
+              <br />
+              <br />
+              <label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="4"
+                  checked={minRating === 4}
+                  onChange={(e) => setMinrating(Number(e.target.value))}
+                  className="me-2"
+                />
+                4 Stars & above
+              </label>
+              <br />
+              <label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="3"
+                  onChange={(e) => setMinrating(Number(e.target.value))}
+                  className="me-2"
+                />
+                3 Stars & above
+              </label>
+              <br />
+              <label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="2"
+                  onChange={(e) => setMinrating(Number(e.target.value))}
+                  className="me-2"
+                />
+                2 Stars & above
+              </label>
+              <br />
+              <label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="1"
+                  onChange={(e) => setMinrating(Number(e.target.value))}
+                  className="me-2"
+                />
+                1 Stars & above
+              </label>
+            </div>
+            <div className="mb-5">
+              <label htmlFor="sorting">
+                <strong>Sort by</strong>
+              </label>
+              <br />
+              <br />
+              <label>
+                <input
+                  type="radio"
+                  name="sorting"
+                  value="asc"
+                  onChange={(e) => setSortOrder(e.target.value)}
+                  className="me-2"
+                />
+                Price - Low to High
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="sorting"
+                  value="desc"
+                  checked={sortOrder === "desc"}
+                  onChange={(e) => setSortOrder(e.target.value)}
+                  className="me-2"
+                />
+                Price - High to Low
+              </label>
+            </div>
           </div>
         </div>
 
