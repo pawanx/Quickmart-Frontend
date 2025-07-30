@@ -83,49 +83,73 @@ Watch a walkthrough (5–7 minutes) of all major features of this app:
 
 List all categories of products<br>
 Sample Response:<br>
-`[{ _id, title, summary, image}, …]`
+
+```
+[{ _id, title, summary, image}, …]
+```
 
 ### **GET /api/products**<br>
 
 Get all products of a particular category<br>
 Sample Response:<br>
-`{ _id, title, description, category, price, rating, image }`
+
+```
+{ _id, title, description, category, price, rating, image }
+```
 
 ### **GET /api/products/:id**<br>
 
 Find one product<br>
 Sample Response:<br>
-`{ _id, title, description, category, price, rating, image }`
+
+```
+{ _id, title, description, category, price, rating, image }
+```
 
 ### **POST /api/addresses/**<br>
 
 Create new address<br>
 Sample Response:<br>
-`{message: "Address create successfully.", _id}`
+
+```
+{message: "Address create successfully.", _id}
+```
 
 ### **GET /api/addresses/**<br>
 
 Get all addresses<br>
 Sample Response:<br>
-`[{_id, name, street, pincode}]`
+
+```
+[{_id, name, street, pincode}]
+```
 
 ### **POST /api/order/**<br>
 
 Create new order<br>
 Sample Response:<br>
-`{message: "Order created successfully.", _id}`
+
+```{message: "Order created successfully.", _id}
+
+```
 
 ### **GET /api/orders/**<br>
 
 Get all orders<br>
 Sample Response:<br>
-`[{ _id, title, description, category, price, rating, image}]`
+
+```
+[{ _id, title, description, category, price, rating, image}]
+```
 
 ### **GET /api/orders/:id**<br>
 
 Get one orders<br>
 Sample Response:<br>
-`{ _id, title, description, category, price, rating, image}`
+
+```
+{ _id, title, description, category, price, rating, image}
+```
 
 ---
 
