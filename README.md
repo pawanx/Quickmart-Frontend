@@ -85,7 +85,13 @@ List all categories of products<br>
 Sample Response:<br>
 
 ```
-[{ _id, title, summary, image}, …]
+[{
+ _id: "123456",
+categoryId: "dairy",
+title: "Dairy, Bread and Eggs",
+image: "https://images.unsplash.com/photo",
+alt: "assorted dairy products",
+ }]
 ```
 
 ### **GET /api/products**<br>
@@ -94,7 +100,16 @@ Get all products of a particular category<br>
 Sample Response:<br>
 
 ```
-{ _id, title, description, category, price, rating, image }
+[{
+ _id: "1324335",
+productId: "d1",
+title: "Amul Milk 1L",
+description: "Fresh and pure full cream milk from Amul.",
+category: "dairy",
+price: 55,
+rating: 4.5,
+image: "https://images.unsplash.com/photo",
+}]
 ```
 
 ### **GET /api/products/:id**<br>
@@ -103,7 +118,16 @@ Find one product<br>
 Sample Response:<br>
 
 ```
-{ _id, title, description, category, price, rating, image }
+{
+_id: "1324335",
+productId: "d1",
+title: "Amul Milk 1L",
+description: "Fresh and pure full cream milk from Amul.",
+category: "dairy",
+price: 55,
+rating: 4.5,
+image: "https://images.unsplash.com/photo",
+}
 ```
 
 ### **POST /api/addresses/**<br>
@@ -112,7 +136,7 @@ Create new address<br>
 Sample Response:<br>
 
 ```
-{message: "Address create successfully.", _id}
+{message: "Address create successfully.", _id:2323523}
 ```
 
 ### **GET /api/addresses/**<br>
@@ -121,7 +145,18 @@ Get all addresses<br>
 Sample Response:<br>
 
 ```
-[{_id, name, street, pincode}]
+[
+{
+_id: "1242536",
+name: "Pawan Mishra",
+street: "123 Main St",
+city: "Mumbai",
+state: "Maharashtra",
+pincode: "400009",
+phone: "9876543211",
+
+}
+]
 ```
 
 ### **POST /api/order/**<br>
@@ -129,8 +164,8 @@ Sample Response:<br>
 Create new order<br>
 Sample Response:<br>
 
-```{message: "Order created successfully.", _id}
-
+```
+{message: "Order created successfully.", "_id":12345}
 ```
 
 ### **GET /api/orders/**<br>
@@ -139,7 +174,17 @@ Get all orders<br>
 Sample Response:<br>
 
 ```
-[{ _id, title, description, category, price, rating, image}]
+[{
+ _id: "6855757",
+productId: "dr3",
+ title: "Sprite 1L",
+description: "Lemon-flavored refreshing cold drink.",
+category: "drinks",
+price: 50,
+rating: 3.6,
+image: "https://images.unsplash.com/photo",
+"quantity": 1
+}]
 ```
 
 ### **GET /api/orders/:id**<br>
@@ -148,7 +193,17 @@ Get one orders<br>
 Sample Response:<br>
 
 ```
-{ _id, title, description, category, price, rating, image}
+{
+_id: "6854657",
+productId: "dr3",
+title: "Sprite 1L",
+description: "Lemon-flavored refreshing cold drink.",
+category: "drinks",
+price: 50,
+rating: 3.6,
+image: "https://images.unsplash.com/photo",
+quantity: 1
+}
 ```
 
 ---
